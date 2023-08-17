@@ -2,7 +2,9 @@
   "name": "teaf-snippets",
   "displayName": "teaf-snippets",
   "description": "This extension contains snippets for TEAF development.",
+  "repository": {"url": "https://github.com/pavelbednar/teaf-snippets"},
   "author": {"name": "Pavel Bednář"},
+  "license": "LGPL-3.0-only",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.81.0"
