@@ -25,5 +25,8 @@
         "path": "./snippets/snippets.code-snippets"
       }
     ]
+  },
+  "scripts": {
+    "build": "vsce package"
   }
 }
