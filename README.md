@@ -12,6 +12,7 @@ Bellow are listed supported snippets
 | Trigger  | Content |
 | :------- | ------- |
 | `actionCreator→`   | Creates a redux action creator |
+| `actionInterface→`   | Creates an interface for redux action |
 | `interfaceInstanceOf→`   | Creates a new Interface with support of `instanceof` comparison|
 | `rfc→`   | Template for typed react functional component |
 | `expall→`   | Export all from package |
@@ -25,17 +26,28 @@ Bellow are listed supported snippets
 ### Action Creator
  Creates a redux action creator. 
  #### optional placeholders
- * Action Name
- * Payload
- * Meta
- * JSDoc
+ * Action Name (required)
+ * Payload (optional)
+ * Meta (optional)
+ * JSDoc (optional)
   
 <img src="./docs/actionCreator.gif"/>
+
+### Action Interface
+ Creates an interface for redux action
+ #### optional placeholders
+ * Action Name (required)
+ * Extends (optional)
+ * Payload (optional)
+ * JSDoc (optional)
+  
+<img src="./docs/actionInterface.gif"/>
 
 ### Interface with instanceof 
 Creates a new Interface with support of `instanceof` comparison.
  #### Placeholders
  * Action Name (required)
+ * Extends (optional)
  * Properties (optional)
  * Methods (optional)
  * Interfaces (optional)

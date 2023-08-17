@@ -18,8 +18,23 @@
 		],
 		"description": "Creates a new Interface snippet with support of instanceof comparison"
 	},
+	"TEAF: Redux action interface": {
+		"prefix": "actionInterface",
+		"body": [
+			"${99:/**\n * $100\n */}",
+			"export interface ${1:Name}${2: extends ${3:Action}} {",
+			"${4:\treadonly payload: {\n\t\t$5\n\t\\};}",
+			"}",
+			"export class $1 {",
+			"\tpublic static [Symbol.hasInstance](instance: any): boolean {",
+			"\t\treturn instance != null && instance.type === ${1/([A-Z][a-z]+$)|((^|[A-Z])[a-z]+)/${1:/upcase}${2:/upcase}${2:+_}/gm};",
+			"\t}",
+			"}"
+		],
+		"description": "Creates an interface for redux action"
+	},
 	"TEAF: Action Creator": {
-		"prefix": "actionCreator",
+		"prefix": "reduxAction",
 		"body": [
 			"${99:/**\n * $100\n */}",
 			"export const create${1:Some}Action = (",
