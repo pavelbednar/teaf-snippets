@@ -1,65 +1,82 @@
-# teaf-snippets README
+# TEAF Snippets for vscode
 
-This is the README for your extension "teaf-snippets". After writing up a brief description, we recommend including the following sections.
+This extension contains snippets for TEAF
 
-## Features
+## Supported languaguages
+* React
+* Typescript
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+## Snippets
+Bellow are listed supported snippets
 
-For example if there is an image subfolder under your extension project workspace:
+| Trigger  | Content |
+| :------- | ------- |
+| `actionCreator→`   | Creates a redux action creator |
+| `interfaceInstanceOf→`   | Creates a new Interface with support of `instanceof` comparison|
+| `rfc→`   | Template for typed react functional component |
+| `expall→`   | Export all from package |
+| `ims→`   | Import sinon package |
+| `imf→`   | Import { `whatever` } from "`some package`" |
+| `useState→`   | Creates strongly typed `useState` with default value |
+| `useEffect→`   | Creates template for `useEffect` with optional cleanup function |
 
-\!\[feature X\]\(images/feature-x.png\)
+## Samples
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+### Action Creator
+ Creates a redux action creator. 
+ #### optional placeholders
+ * Action Name
+ * Payload
+ * Meta
+ * JSDoc
+  
+<img src="./docs/actionCreator.gif"/>
 
-## Requirements
+### Interface with instanceof 
+Creates a new Interface with support of `instanceof` comparison.
+ #### Placeholders
+ * Action Name (required)
+ * Properties (optional)
+ * Methods (optional)
+ * Interfaces (optional)
+ * Conditions in `instanceof` (optional)
+  
+<img src="./docs/interfaceInstanceOf.gif"/>
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+### React Functional Component 
+Template for typed react functional component.
+ #### Placeholders
+ * Component Name (required, name of file is default value)
+ * BemClassName (optional)
+ * Props (optional, `children` default value)
+ * JSDoc (optional)
+  
+<img src="./docs/rfc.gif"/>
 
-## Extension Settings
+### useState
+Creates strongly typed `useState` with default value.
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+<img src="./docs/useState.gif"/>
 
-For example:
+### useEffect
+ #### Placeholders
+ * Dependency Array (optional)
+ * Cleanup function (optional)
+ * JSDoc (optional)
+Creates template for `useEffect` with optional cleanup function.
 
-This extension contributes the following settings:
+<img src="./docs/useEffect.gif"/>
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+### Export all
+Creates syntax for export all from package.
 
-## Known Issues
+<img src="./docs/expall.gif"/>
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+### Import sinon package
+creates import for sinon package.
 
-## Release Notes
+<img src="./docs/ims.gif"/>
 
-Users appreciate release notes as you update your extension.
+### Import { `whatever` } from "`some package`"
 
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+<img src="./docs/imf.gif"/>

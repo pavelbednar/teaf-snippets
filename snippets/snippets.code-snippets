@@ -16,7 +16,7 @@
 			"\t}",
 			"}"
 		],
-		"description": "Creates new Interface snippet with support of instanceof comparison"
+		"description": "Creates a new Interface snippet with support of instanceof comparison"
 	},
 	"TEAF: Action Creator": {
 		"prefix": "actionCreator",
@@ -45,14 +45,14 @@
 	"TEAF: Import {what} from {something}": {
 		"prefix": "imf",
 		"body": "import { ${2:what} } from \"${1:package}\";${0}",
-		"description": "Import {} from \"package\""
+		"description": "Import { whatever} from \" some package\""
 	},
 	"TEAF: React Functional Component": {
 		"prefix": "rfc",
 		"body": [
 			"${99:/**\n * $100\n */}",
 			"import React, {FunctionComponent} from \"react\";",
-			"${1:const classNames = bemClassNames(\"${2:${TM_FILENAME_BASE/(.*)/${2:/downcase}/}}\");}",
+			"${1:const classNames = bemClassNames(\"$2\");}",
 			"",
 			"type ${2:${TM_FILENAME_BASE}}Props = {",
 			"\t${3:children?: React.ReactNode;}",
