@@ -1,7 +1,8 @@
 {
   "name": "teaf-snippets",
   "displayName": "teaf-snippets",
-  "description": "",
+  "description": "This extension contains snippets for TEAF development.",
+  "author": {"name": "Pavel Bednář"},
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.81.0"
@@ -13,6 +14,14 @@
     "snippets": [
       {
         "language": "typescript",
+        "path": "./snippets/snippets.code-snippets"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/snippets.code-snippets"
+      },
+      {
+        "language": "react",
         "path": "./snippets/snippets.code-snippets"
       }
     ]

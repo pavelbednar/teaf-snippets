@@ -1,6 +1,6 @@
 # TEAF Snippets for vscode
 
-This extension contains snippets for TEAF
+This extension contains snippets for TEAF development.
 
 ## Supported languaguages
 * React
