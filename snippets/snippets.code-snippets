@@ -1,1 +1,20 @@
-{}
+{
+	"Interface with instanceof": {
+		"prefix": "interfaceInstanceOf",
+		"body" : [
+			"export interface ${1:Name}${2: extends $3} {",
+			"\t$4",
+			"}\n",
+			"export class $1 {",
+			"\t${5:private static _properties: (keyof $1)[] = [$6];}",
+			"\t${7:private static _methods: (keyof $1)[] = [$8];}",
+			"\t${9:private static _interfaces = [$10];}",
+			"\n",
+			"\tpublic static [Symbol.hasInstance](instance: any): boolean {",
+			"\t\treturn instance != null${11: && !this._properties.some((value) => !Reflect.has(instance, value))}${12: && !this._methods.some(value => typeof instance[value] !== \"function\")}${13: && this._interfaces.every((_interface) => instance instanceof _interface)};",
+			"\t}",
+			"}"
+		], 
+		"description": "Creates new Interface snippet with support of instanceof comparison"
+	}
+}
