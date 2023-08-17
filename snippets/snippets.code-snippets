@@ -2,6 +2,7 @@
 	"Interface with instanceof": {
 		"prefix": "interfaceInstanceOf",
 		"body" : [
+			"${99:/**\n * $100\n */}",
 			"export interface ${1:Name}${2: extends $3} {",
 			"\t$4",
 			"}\n",
@@ -16,5 +17,19 @@
 			"}"
 		], 
 		"description": "Creates new Interface snippet with support of instanceof comparison"
+	},
+	"Action Creator":{
+		"prefix": "actionCreator",
+		"body":[
+			"${99:/**\n * $100\n */}",
+			"export const create${1:MyLongName}Action = (",
+			"\t$2",
+			"): I$1Action => ({",
+			"\ttype: ${1/([A-Z][a-z]+$)|((^|[A-Z])[a-z]+)/${1:/upcase}${2:/upcase}${2:+_}/gm},",
+			"${3:\tpayload: {\n\t\t$4\n\t\\},}",
+			"${5:\tmeta: {\n\t\t$6\n\t\\},}",
+			"});",
+		],
+		"description": "Creates a redux action creator."
 	}
 }
