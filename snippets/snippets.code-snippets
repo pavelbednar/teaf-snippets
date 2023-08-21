@@ -3,7 +3,7 @@
 		"prefix": "interfaceInstanceOf",
 		"body": [
 			"${99:/**\n * $100\n */}",
-			"export interface ${1:Name}${2: extends $3} {",
+			"export interface I${1:Name}${2: extends $3} {",
 			"\t$0",
 			"}\n",
 			"export class $1 {",
@@ -22,10 +22,10 @@
 		"prefix": "actionInterface",
 		"body": [
 			"${99:/**\n * $100\n */}",
-			"export interface ${1:Name}${2: extends ${3:Action}} {",
+			"export interface I${1:Name}Action${2: extends ${3:Action}} {",
 			"${4:\treadonly payload: {\n\t\t$5\n\t\\};}",
 			"}",
-			"export class $1 {",
+			"export class I$1Action {",
 			"\tpublic static [Symbol.hasInstance](instance: any): boolean {",
 			"\t\treturn instance != null && instance.type === ${1/([A-Z][a-z]+$)|((^|[A-Z])[a-z]+)/${1:/upcase}${2:/upcase}${2:+_}/gm};",
 			"\t}",
@@ -34,7 +34,7 @@
 		"description": "Creates an interface for redux action"
 	},
 	"TEAF: Action Creator": {
-		"prefix": "reduxAction",
+		"prefix": "actionCreator",
 		"body": [
 			"${99:/**\n * $100\n */}",
 			"export const create${1:Some}Action = (",
