@@ -92,3 +92,7 @@ creates import for sinon package.
 ### Import { `whatever` } from "`some package`"
 
 <img src="./docs/imf.gif"/>
+
+### Change log
+#### 0.0.4
+* Moved jsdoc section for `rfc` snippet

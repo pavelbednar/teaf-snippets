@@ -4,8 +4,9 @@
   "description": "This extension contains snippets for TEAF development.",
   "repository": {"url": "https://github.com/pavelbednar/teaf-snippets"},
   "author": {"name": "Pavel Bednář"},
+  "publisher": "PavelBednar",
   "license": "LGPL-3.0-only",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "engines": {
     "vscode": "^1.81.0"
   },
@@ -29,6 +30,7 @@
     ]
   },
   "scripts": {
-    "build": "vsce package"
+    "build": "vsce package",
+    "publish": "vsce publish"
   }
 }

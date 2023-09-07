@@ -65,7 +65,6 @@
 	"TEAF: React Functional Component": {
 		"prefix": "rfc",
 		"body": [
-			"${99:/**\n * $100\n */}",
 			"import React, {FunctionComponent} from \"react\";",
 			"${1:const classNames = bemClassNames(\"$2\");}",
 			"",
@@ -73,6 +72,7 @@
 			"\t${3:children?: React.ReactNode;}",
 			"}",
 			"",
+			"${99:/**\n * $100\n */}",
 			"export const $2: FunctionComponent<$2Props> = (${4:{ ${5:children} \\}}) => {",
 			"\treturn (",
 			"\t\t<div${6: className={classNames()\\}}>",
