@@ -114,12 +114,26 @@
 		],
 		"description": "Creates state props"
 	},
+	"TEAF: dispatch props": {
+		"prefix": "dispatchProps",
+		"body": [
+			"type DispatchProps = Pick<${1:${TM_FILENAME_BASE}}ComponentProps, ${2:\"someMethod\"}>;\n",
+		],
+		"description": "Creates dispatch props"
+	},
+	"TEAF: connect": {
+		"prefix": "connect",
+		"body": [
+			"connect(${2|mapStateToProps,createMapStateToProps|}${3:, mapDispatchToProps}${4:, mergeProps})(${1:${TM_FILENAME_BASE}}Component)",
+		],
+		"description": "Creates dispatch props"
+	},
 	"TEAF: mapStateToProps": {
 		"prefix": "mapStateToProps",
 		"body": [
 			"${1:type StateProps = Pick<${2:${TM_FILENAME_BASE}}ComponentProps, ${3:\"someProp\"}>;\n}",
 			"const mapStateToProps: MapStateToProps<StateProps, ${2:${TM_FILENAME_BASE}}Props, IAppState> = (state${4: , { ${5:someOwnProp} \\}}) => ({",
-				"\t${6:someProp: getSomeProp(state),}",
+				"\t${6:someProp: getSomeProp(state),}$0",
 				"});",
 		],
 		"description": "Creates state props and mapToState function."
@@ -131,10 +145,20 @@
 			"const createMapStateToProps: (state: IAppState, props: ${2:${TM_FILENAME_BASE}}Props) => MapStateToProps<StateProps, ${2:${TM_FILENAME_BASE}}Props, IAppState> = () => {",
 			"\t${4:const getSomethingSelector = createSomethingSelector();}",
 			"\treturn (state${5: , { ${6:someOwnProp} \\}}) => ({",
-			"\t\t${7:someProp: getSomethingSelector(state, { someOwnProp \\}),}",
+			"\t\t${7:someProp: getSomethingSelector(state, { someOwnProp \\}),}$0",
 			"\t});",
 			"};",
 		],
-		"description": "Creates function `createMapStateToProps` returning `MapStateToProps`."
-	}
+		"description": "Creates function `createMapStateToProps` returning `MapStateToProps`.",
+	},
+	"TEAF: mapDispatchToProps": {
+		"prefix": "mapDispatchToProps",
+		"body": [
+			"${1:type DispatchProps = Pick<${2:${TM_FILENAME_BASE}}ComponentProps, ${3:\"someMethod\"}>;\n}",
+			"const mapDispatchToProps: MapDispatchToProps<DispatchProps, ${2:${TM_FILENAME_BASE}}Props> = (dispatch${4: , { ${5:someOwnProp} \\}}) => ({",
+				"\t${6:${7:someMethod}: dispatch(${8:createSomeAction()}),}$0",
+				"});",
+		],
+		"description": "Creates state props and mapToState function."
+	},
 }

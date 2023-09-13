@@ -35,8 +35,11 @@ Bellow are listed supported snippets
 | :------- | ------- |
 | `omitContainerProps→` | Creates template for connected component props |
 | `stateProps→` | Creates StateProps type |
-| `mapStateToProps→` | Creates `mapToState` variable used when connecting presentational components |
+| `dispatchProps→` | Creates DispatchProps type |
+| `connect→` | Connects presentational component with props |
+| `mapStateToProps→` | Creates `mapStateToProps` variable used when connecting presentational components |
 | `createMapStateToProps→` | Creates function `createMapStateToProps` returning `MapStateToProps |
+| `mapDispatchToProps→` | Creates `mapDispatchToProps` variable used when connecting presentational components |
 
 
 # Samples
@@ -127,15 +130,22 @@ Snippet used when connection presentational component to redux. It creates props
 ## Connected Components Snippets
 
 ### stateProps
-Creates StateProps type picking props from presentational component
+Creates `StateProps` type picking props from presentational component.
+<img src="./docs/stateProps.gif"/>
 
+### dispatchProps
+Creates `DispatchProps` type picking props from presentational component.
+<img src="./docs/dispatchProps.gif"/>
+
+### connect
+Connects presentational component with props.
+<img src="./docs/connect.gif"/>
 
 ### mapStateToProps
 Creates `mapStateToProps` variable used when connecting presentational components.
  #### Placeholders
  * Component Name (required, name of file is default value)
  * Create `StateProps` or skip them (optional)
- * Picked props for presentational component (optional)
  * Own component props entering mapStateToProps (optional)
 
 <img src="./docs/mapStateToProps.gif"/>
@@ -145,7 +155,15 @@ Creates function `createMapStateToProps` returning `MapStateToProps.
  #### Placeholders
  * Component Name (required, name of file is default value)
  * Create `StateProps` or skip them (optional)
- * Picked props for presentational component (optional)
  * Own component props entering mapStateToProps (optional)
 
 <img src="./docs/createMapStateToProps.gif"/>
+
+### mapDispatchToProps
+Creates `mapDispatchToProps` variable used when connecting presentational components.
+ #### Placeholders
+ * Component Name (required, name of file is default value)
+ * Create `DispatchProps` or skip them (optional)
+ * Own component props entering mapStateToProps (optional)
+
+<img src="./docs/mapDispatchToProps.gif"/>
