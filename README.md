@@ -21,6 +21,8 @@ Bellow are listed supported snippets
 | `useState→`   | Creates strongly typed `useState` with default value |
 | `useEffect→`   | Creates template for `useEffect` with optional cleanup function |
 | `omitContainerProps` | Creates template for connected component props |
+| `mapStateToProps` | Creates `mapToState` variable used when connecting presentational components |
+
 ## Samples
 
 ### Action Creator
@@ -103,3 +105,12 @@ Snippet used when connection presentational component to redux. It creates props
  * JSDoc (optional)
 
 <img src="./docs/omitContainerProps.gif"/>
+
+### mapStateToProps
+Creates `mapToState` variable used when connecting presentational components.
+ #### Placeholders
+ * Component Name (required, name of file is default value)
+ * Picked props pro presentational component (optional)
+ * Own component props entering mapStateToProps (optional)
+
+<img src="./docs/mapStateToProps.gif"/>

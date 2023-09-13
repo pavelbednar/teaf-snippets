@@ -107,4 +107,14 @@
 		],
 		"description": "Creates props for a component using OmitContainerProps type."
 	},
+	"TEAF: mapStateToProps": {
+		"prefix": "mapStateToProps",
+		"body": [
+			"type StateProps = Pick<${1:${TM_FILENAME_BASE}}ComponentProps, ${2:\"someProp\"}>;\n",
+			"const mapStateToProps: MapStateToProps<StateProps, ${1:${TM_FILENAME_BASE}}Props, IAppState> = (state${3: , { ${4:someOwnProp} \\}}) => ({",
+				"\t${5:someProp: getSomeProp(state),}",
+				"});",
+		],
+		"description": "Creates state props and mapToState function."
+	}
 }
