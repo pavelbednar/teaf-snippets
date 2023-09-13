@@ -117,6 +117,7 @@ creates import for sinon package.
 
 <img src="./docs/imf.gif"/>
 
+## Connected Components Snippets
 ### OmitCointerProps
 Snippet used when connection presentational component to redux. It creates props for connected component and omits props connected in StateProps or DispatchProps. 
 
@@ -126,8 +127,6 @@ Snippet used when connection presentational component to redux. It creates props
  * JSDoc (optional)
 
 <img src="./docs/omitContainerProps.gif"/>
-
-## Connected Components Snippets
 
 ### stateProps
 Creates `StateProps` type picking props from presentational component.
