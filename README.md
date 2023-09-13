@@ -20,7 +20,7 @@ Bellow are listed supported snippets
 | `imf→`   | Import { `whatever` } from "`some package`" |
 | `useState→`   | Creates strongly typed `useState` with default value |
 | `useEffect→`   | Creates template for `useEffect` with optional cleanup function |
-
+| `omitContainerProps` | Creates template for connected component props |
 ## Samples
 
 ### Action Creator
@@ -71,11 +71,12 @@ Creates strongly typed `useState` with default value.
 <img src="./docs/useState.gif"/>
 
 ### useEffect
+Creates template for `useEffect` with optional cleanup function.
+
  #### Placeholders
  * Dependency Array (optional)
  * Cleanup function (optional)
  * JSDoc (optional)
-Creates template for `useEffect` with optional cleanup function.
 
 <img src="./docs/useEffect.gif"/>
 
@@ -93,6 +94,12 @@ creates import for sinon package.
 
 <img src="./docs/imf.gif"/>
 
-### Change log
-#### 0.0.4
-* Moved jsdoc section for `rfc` snippet
+### OmitCointerProps
+Snippet used when connection presentational component to redux. It creates props for connected component and omits props connected in StateProps or DispatchProps. 
+
+ #### Placeholders
+ * Component Name (required, name of file is default value)
+ * Own props (optional)
+ * JSDoc (optional)
+
+<img src="./docs/omitContainerProps.gif"/>

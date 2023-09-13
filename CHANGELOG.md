@@ -1,9 +1,8 @@
 # Change Log
 
-All notable changes to the "teaf-snippets" extension will be documented in this file.
-
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
-## [Unreleased]
-
-- Initial release
+#### 0.0.6
+* New spippet `omitContainerProps`
+#### 0.0.5
+* Better BEM class naming for `rfc` snippet. Now it creates lower-cased name seperated with dashes.
+#### 0.0.4
+* Moved jsdoc section for `rfc` snippet

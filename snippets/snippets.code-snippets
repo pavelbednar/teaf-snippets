@@ -66,7 +66,7 @@
 		"prefix": "rfc",
 		"body": [
 			"import React, {FunctionComponent} from \"react\";",
-			"${1:const classNames = bemClassNames(\"$2\");}",
+			"${1:const classNames = bemClassNames(\"${2/([A-Z][a-z]+$)|((^|[A-Z])[a-z]+)/${1:/downcase}${2:/downcase}${2:+-}/gm}\");}",
 			"",
 			"type ${2:${TM_FILENAME_BASE}}Props = {",
 			"\t${3:children?: React.ReactNode;}",
@@ -97,6 +97,14 @@
 			"${2:\treturn () => {\n\t\t$3\n\t}}",
 			"},[$1]);",
 		],
-		"description": "PB: useEffect snippet"
-	}
+		"description": "Creates useEffect hook with its body and cleanup function."
+	},
+	"TEAF: omitContainerProps": {
+		"prefix": "omitContainerProps",
+		"body": [
+			"${99:/**\n * $100\n */}",
+			"export type ${1:${TM_FILENAME_BASE}}Props = OmitContainerProps<${2:{\n${3:readonly someOwnProp: string;\n}\\} & }${1:${TM_FILENAME_BASE}}ComponentProps, StateProps, DispatchProps>;",
+		],
+		"description": "Creates props for a component using OmitContainerProps type."
+	},
 }
