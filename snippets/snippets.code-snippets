@@ -62,6 +62,15 @@
 		"body": "import { ${2:what} } from \"${1:package}\";${0}",
 		"description": "Import { whatever} from \" some package\""
 	},
+	"TEAF: Import Redux stuff for connected components": {
+		"prefix": "imrc",
+		"body": [
+			"import { IAppState, OmitContainerProps } from \"@multiweb/types/react\";",
+			"import { MapDispatchToProps, MapStateToProps, connect } from \"react-redux\";",
+			"import { ${1:${TM_FILENAME_BASE}}ComponentProps, ${1:${TM_FILENAME_BASE}}Component } from \"../${1:${TM_FILENAME_BASE}}Component\";",
+		],
+		"description": "Import types for connected components.",
+	},
 	"TEAF: React Functional Component": {
 		"prefix": "rfc",
 		"body": [
@@ -102,8 +111,7 @@
 	"TEAF: omitContainerProps": {
 		"prefix": "omitContainerProps",
 		"body": [
-			"${99:/**\n * $100\n */}",
-			"export type ${1:${TM_FILENAME_BASE}}Props = OmitContainerProps<${2:{\n${3:readonly someOwnProp: string;\n}\\} & }${1:${TM_FILENAME_BASE}}ComponentProps, StateProps, DispatchProps>;",
+			"export type ${1:${TM_FILENAME_BASE}}Props = OmitContainerProps<${2:{\n\t${3:readonly someOwnProp: string;}\n\\} & }${1:${TM_FILENAME_BASE}}ComponentProps${4:, StateProps}${5:, DispatchProps}>;",
 		],
 		"description": "Creates props for a component using OmitContainerProps type."
 	},
@@ -132,7 +140,7 @@
 		"prefix": "mapStateToProps",
 		"body": [
 			"${1:type StateProps = Pick<${2:${TM_FILENAME_BASE}}ComponentProps, ${3:\"someProp\"}>;\n}",
-			"const mapStateToProps: MapStateToProps<StateProps, ${2:${TM_FILENAME_BASE}}Props, IAppState> = (state${4: , { ${5:someOwnProp} \\}}) => ({",
+			"const mapStateToProps: MapStateToProps<StateProps, ${2:${TM_FILENAME_BASE}}Props, IAppState> = (state${4:, { ${5:someOwnProp} \\}}) => ({",
 				"\t${6:someProp: getSomeProp(state),}$0",
 				"});",
 		],
@@ -155,7 +163,7 @@
 		"prefix": "mapDispatchToProps",
 		"body": [
 			"${1:type DispatchProps = Pick<${2:${TM_FILENAME_BASE}}ComponentProps, ${3:\"someMethod\"}>;\n}",
-			"const mapDispatchToProps: MapDispatchToProps<DispatchProps, ${2:${TM_FILENAME_BASE}}Props> = (dispatch${4: , { ${5:someOwnProp} \\}}) => ({",
+			"const mapDispatchToProps: MapDispatchToProps<DispatchProps, ${2:${TM_FILENAME_BASE}}Props> = (dispatch${4:, { ${5:someOwnProp} \\}}) => ({",
 				"\t${6:${7:someMethod}: dispatch(${8:createSomeAction()}),}$0",
 				"});",
 		],

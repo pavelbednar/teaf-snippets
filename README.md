@@ -29,6 +29,7 @@ Bellow are listed supported snippets
 | `expall→`   | Export all from package |
 | `ims→`   | Import sinon package |
 | `imf→`   | Import { `whatever` } from "`some package`" |
+| `imrc→`   | Inserts imports for redux connected components" |
 
 ### Connected Components Snippets
 | Trigger  | Content |
@@ -82,7 +83,7 @@ Creates template for `useEffect` with optional cleanup function.
 <img src="./docs/useEffect.gif"/>
 
 ## Redux Actions Snippets
-### Action Creator
+### Action Creator (`actionCreator`)
  Creates a redux action creator. 
  #### optional placeholders
  * Action Name (required)
@@ -92,7 +93,7 @@ Creates template for `useEffect` with optional cleanup function.
   
 <img src="./docs/actionCreator.gif"/>
 
-### Action Interface
+### Action Interface (`actionInterface`)
  Creates an interface for redux action
  #### optional placeholders
  * Action Name (required)
@@ -102,20 +103,25 @@ Creates template for `useEffect` with optional cleanup function.
   
 <img src="./docs/actionInterface.gif"/>
 
-## Import/Export snippets
+## Import/Export snippets (`expall`)
 ### Export all
 Creates syntax for export all from package.
 
 <img src="./docs/expall.gif"/>
 
-### Import sinon package
+### Import sinon package (`ims`)
 creates import for sinon package.
 
 <img src="./docs/ims.gif"/>
 
-### Import { `whatever` } from "`some package`"
+### Import { `whatever` } from "`some package`" (`imf`)
 
 <img src="./docs/imf.gif"/>
+
+### Import redux stuff for connected components (`imrc`)
+Creates type imports from `react` and `react-redux` a `multiweb/types/react` packages needed for connecting componens (i.e. types `MapStateProps`, `IAppState` and others). Also creates import for presentational component and its props.
+
+<img src="./docs/imrc.gif"/>
 
 ## Connected Components Snippets
 ### OmitCointerProps
