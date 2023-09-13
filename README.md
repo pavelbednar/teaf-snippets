@@ -9,42 +9,38 @@ This extension contains snippets for TEAF development.
 ## Snippets
 Bellow are listed supported snippets
 
+### General snippets
+| Trigger  | Content |
+| :------- | ------- |
+| `interfaceInstanceOf→`   | Creates a new Interface with support of `instanceof` comparison|
+| `rfc→`   | Template for typed react functional component |
+| `useState→`   | Creates strongly typed `useState` with default value |
+| `useEffect→`   | Creates template for `useEffect` with optional cleanup function |
+
+### Redux Actions Snippets
 | Trigger  | Content |
 | :------- | ------- |
 | `actionCreator→`   | Creates a redux action creator |
 | `actionInterface→`   | Creates an interface for redux action |
-| `interfaceInstanceOf→`   | Creates a new Interface with support of `instanceof` comparison|
-| `rfc→`   | Template for typed react functional component |
+
+### Import/Export snippets
+| Trigger  | Content |
+| :------- | ------- |
 | `expall→`   | Export all from package |
 | `ims→`   | Import sinon package |
 | `imf→`   | Import { `whatever` } from "`some package`" |
-| `useState→`   | Creates strongly typed `useState` with default value |
-| `useEffect→`   | Creates template for `useEffect` with optional cleanup function |
-| `omitContainerProps` | Creates template for connected component props |
-| `mapStateToProps` | Creates `mapToState` variable used when connecting presentational components |
 
-## Samples
+### Connected Components Snippets
+| Trigger  | Content |
+| :------- | ------- |
+| `omitContainerProps→` | Creates template for connected component props |
+| `stateProps→` | Creates StateProps type |
+| `mapStateToProps→` | Creates `mapToState` variable used when connecting presentational components |
+| `createMapStateToProps→` | Creates function `createMapStateToProps` returning `MapStateToProps |
 
-### Action Creator
- Creates a redux action creator. 
- #### optional placeholders
- * Action Name (required)
- * Payload (optional)
- * Meta (optional)
- * JSDoc (optional)
-  
-<img src="./docs/actionCreator.gif"/>
 
-### Action Interface
- Creates an interface for redux action
- #### optional placeholders
- * Action Name (required)
- * Extends (optional)
- * Payload (optional)
- * JSDoc (optional)
-  
-<img src="./docs/actionInterface.gif"/>
-
+# Samples
+## General snippets
 ### Interface with instanceof 
 Creates a new Interface with support of `instanceof` comparison.
  #### Placeholders
@@ -82,6 +78,28 @@ Creates template for `useEffect` with optional cleanup function.
 
 <img src="./docs/useEffect.gif"/>
 
+## Redux Actions Snippets
+### Action Creator
+ Creates a redux action creator. 
+ #### optional placeholders
+ * Action Name (required)
+ * Payload (optional)
+ * Meta (optional)
+ * JSDoc (optional)
+  
+<img src="./docs/actionCreator.gif"/>
+
+### Action Interface
+ Creates an interface for redux action
+ #### optional placeholders
+ * Action Name (required)
+ * Extends (optional)
+ * Payload (optional)
+ * JSDoc (optional)
+  
+<img src="./docs/actionInterface.gif"/>
+
+## Import/Export snippets
 ### Export all
 Creates syntax for export all from package.
 
@@ -106,11 +124,28 @@ Snippet used when connection presentational component to redux. It creates props
 
 <img src="./docs/omitContainerProps.gif"/>
 
+## Connected Components Snippets
+
+### stateProps
+Creates StateProps type picking props from presentational component
+
+
 ### mapStateToProps
-Creates `mapToState` variable used when connecting presentational components.
+Creates `mapStateToProps` variable used when connecting presentational components.
  #### Placeholders
  * Component Name (required, name of file is default value)
- * Picked props pro presentational component (optional)
+ * Create `StateProps` or skip them (optional)
+ * Picked props for presentational component (optional)
  * Own component props entering mapStateToProps (optional)
 
 <img src="./docs/mapStateToProps.gif"/>
+
+### createMapStateToProps
+Creates function `createMapStateToProps` returning `MapStateToProps.
+ #### Placeholders
+ * Component Name (required, name of file is default value)
+ * Create `StateProps` or skip them (optional)
+ * Picked props for presentational component (optional)
+ * Own component props entering mapStateToProps (optional)
+
+<img src="./docs/createMapStateToProps.gif"/>

@@ -107,14 +107,34 @@
 		],
 		"description": "Creates props for a component using OmitContainerProps type."
 	},
+	"TEAF: state props": {
+		"prefix": "stateProps",
+		"body": [
+			"type StateProps = Pick<${1:${TM_FILENAME_BASE}}ComponentProps, ${2:\"someProp\"}>;\n",
+		],
+		"description": "Creates state props"
+	},
 	"TEAF: mapStateToProps": {
 		"prefix": "mapStateToProps",
 		"body": [
-			"type StateProps = Pick<${1:${TM_FILENAME_BASE}}ComponentProps, ${2:\"someProp\"}>;\n",
-			"const mapStateToProps: MapStateToProps<StateProps, ${1:${TM_FILENAME_BASE}}Props, IAppState> = (state${3: , { ${4:someOwnProp} \\}}) => ({",
-				"\t${5:someProp: getSomeProp(state),}",
+			"${1:type StateProps = Pick<${2:${TM_FILENAME_BASE}}ComponentProps, ${3:\"someProp\"}>;\n}",
+			"const mapStateToProps: MapStateToProps<StateProps, ${2:${TM_FILENAME_BASE}}Props, IAppState> = (state${4: , { ${5:someOwnProp} \\}}) => ({",
+				"\t${6:someProp: getSomeProp(state),}",
 				"});",
 		],
 		"description": "Creates state props and mapToState function."
+	},
+	"TEAF: createMapStateToProps": {
+		"prefix": "createMapStateToProps",
+		"body": [
+			"${1:type StateProps = Pick<${2:${TM_FILENAME_BASE}}ComponentProps, ${3:\"someProp\"}>;\n}",
+			"const createMapStateToProps: (state: IAppState, props: ${2:${TM_FILENAME_BASE}}Props) => MapStateToProps<StateProps, ${2:${TM_FILENAME_BASE}}Props, IAppState> = () => {",
+			"\t${4:const getSomethingSelector = createSomethingSelector();}",
+			"\treturn (state${5: , { ${6:someOwnProp} \\}}) => ({",
+			"\t\t${7:someProp: getSomethingSelector(state, { someOwnProp \\}),}",
+			"\t});",
+			"};",
+		],
+		"description": "Creates function `createMapStateToProps` returning `MapStateToProps`."
 	}
 }
