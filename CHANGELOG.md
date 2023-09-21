@@ -1,4 +1,6 @@
 # Change Log
+#### 0.0.9
+* updated typo in readme
 #### 0.0.7
 * New spippets `imrc` creating type imports for redux connected components.
 * New spippets `destruct` fro destructing object.

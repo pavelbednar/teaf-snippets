@@ -31,7 +31,7 @@ Bellow are listed supported snippets
 | `expall→`   | Export all from package |
 | `ims→`   | Import sinon package |
 | `imf→`   | Import { `whatever` } from "`some package`" |
-| `imrc→`   | Inserts imports for redux connected components" |
+| `imrc→`   | Inserts imports for redux connected components |
 
 ### Connected Components Snippets
 | Trigger  | Content |
@@ -41,7 +41,7 @@ Bellow are listed supported snippets
 | `dispatchProps→` | Creates DispatchProps type |
 | `connect→` | Connects presentational component with props |
 | `mapStateToProps→` | Creates `mapStateToProps` variable used when connecting presentational components |
-| `createMapStateToProps→` | Creates function `createMapStateToProps` returning `MapStateToProps |
+| `createMapStateToProps→` | Creates function `createMapStateToProps` returning `MapStateToProps` |
 | `mapDispatchToProps→` | Creates `mapDispatchToProps` variable used when connecting presentational components |
 
 
@@ -94,6 +94,7 @@ Picks members from an object and place them in standalone variables
  ```ts
  const { variable1, variable1, ...rest} = objectName;
  ```
+ 
 
 ## Redux Actions Snippets
 ### Action Creator (`actionCreator`)
