@@ -1,6 +1,8 @@
 # Change Log
 #### 0.0.7
 * New spippets `imrc` creating type imports for redux connected components.
+* New spippets `destruct` fro destructing object.
+* New spippets `actionConstant` creating name for a redux action.
 
 #### 0.0.6
 * New spippets for connecting components to redux.

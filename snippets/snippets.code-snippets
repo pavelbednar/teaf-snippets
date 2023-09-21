@@ -132,7 +132,7 @@
 	"TEAF: connect": {
 		"prefix": "connect",
 		"body": [
-			"connect(${2|mapStateToProps,createMapStateToProps|}${3:, mapDispatchToProps}${4:, mergeProps})(${1:${TM_FILENAME_BASE}}Component)",
+			"export const ${1:${TM_FILENAME_BASE}} = connect(${2|mapStateToProps,createMapStateToProps|}${3:, mapDispatchToProps}${4:, mergeProps})(${1:${TM_FILENAME_BASE}}Component);",
 		],
 		"description": "Creates dispatch props"
 	},
@@ -164,9 +164,19 @@
 		"body": [
 			"${1:type DispatchProps = Pick<${2:${TM_FILENAME_BASE}}ComponentProps, ${3:\"someMethod\"}>;\n}",
 			"const mapDispatchToProps: MapDispatchToProps<DispatchProps, ${2:${TM_FILENAME_BASE}}Props> = (dispatch${4:, { ${5:someOwnProp} \\}}) => ({",
-				"\t${6:${7:someMethod}: dispatch(${8:createSomeAction()}),}$0",
+				"\t${6:${7:someMethod}: () => dispatch(${8:createSomeAction()}),}$0",
 				"});",
 		],
 		"description": "Creates state props and mapToState function."
+	},
+	"TEAF: Redux Action Name Contant ": {
+		"prefix": "actionConstant",
+		"body": "export const ${1/([A-Z][a-z]+$)|((^|[A-Z])[a-z]+)/${1:/upcase}${2:/upcase}${2:+_}/gm} = createActionType(\"${1/([A-Z][a-z]+$)|((^|[A-Z])[a-z]+)/${1:/upcase}${2:/upcase}${2:+_}/gm}\");",
+		"description": "Creates exportable const for redux action name"
+	},
+	"TEAF: Object destructing ": {
+		"prefix": "destruct",
+		"body": "const { ${2:property}${3:, ...${4:rest}} } = ${1:objectName};$0",
+		"description": "Creates exportable const for redux action name"
 	},
 }

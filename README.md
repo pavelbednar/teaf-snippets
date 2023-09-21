@@ -16,12 +16,14 @@ Bellow are listed supported snippets
 | `rfc→`   | Template for typed react functional component |
 | `useState→`   | Creates strongly typed `useState` with default value |
 | `useEffect→`   | Creates template for `useEffect` with optional cleanup function |
+| `destruct→`   | Object destructing |
 
 ### Redux Actions Snippets
 | Trigger  | Content |
 | :------- | ------- |
 | `actionCreator→`   | Creates a redux action creator |
 | `actionInterface→`   | Creates an interface for redux action |
+| `actionConstant→`   | Creates constant name for redux action |
 
 ### Import/Export snippets
 | Trigger  | Content |
@@ -82,10 +84,21 @@ Creates template for `useEffect` with optional cleanup function.
 
 <img src="./docs/useEffect.gif"/>
 
+### Object destructing (`destruct`)
+Picks members from an object and place them in standalone variables
+#### Placeholders
+ * Object Name (required)
+ * Variable names (required)
+ * Rest properties (optional)
+
+ ```ts
+ const { variable1, variable1, ...rest} = objectName;
+ ```
+
 ## Redux Actions Snippets
 ### Action Creator (`actionCreator`)
  Creates a redux action creator. 
- #### optional placeholders
+ #### Placeholders
  * Action Name (required)
  * Payload (optional)
  * Meta (optional)
@@ -95,13 +108,22 @@ Creates template for `useEffect` with optional cleanup function.
 
 ### Action Interface (`actionInterface`)
  Creates an interface for redux action
- #### optional placeholders
+ #### Placeholders
  * Action Name (required)
  * Extends (optional)
  * Payload (optional)
  * JSDoc (optional)
   
 <img src="./docs/actionInterface.gif"/>
+
+### Action Name Constant (`actionConstant`)
+ Creates constant name for redux action
+#### Placeholders
+ * Action Name (required)
+
+ ```ts
+ export const ACTION_NAME = createActionType("ACTION_NAME");
+ ```
 
 ## Import/Export snippets (`expall`)
 ### Export all
