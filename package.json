@@ -6,7 +6,7 @@
   "author": {"name": "Pavel Bednář"},
   "publisher": "PavelBednar",
   "license": "LGPL-3.0-only",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "engines": {
     "vscode": "^1.81.0"
   },
