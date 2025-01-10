@@ -17,6 +17,9 @@ Bellow are listed supported snippets
 | `useState→`   | Creates strongly typed `useState` with default value |
 | `useEffect→`   | Creates template for `useEffect` with optional cleanup function |
 | `destruct→`   | Object destructing |
+| `tsig→`   | Creates typescript `//@ts-ignore` directive |
+| `region→`   | Creates typescript `//#region` directive`` |
+| `cl→`   | Creates `console.log` with `//eslint-disable-next-line no-console` directive  |
 
 ### Redux Actions Snippets
 | Trigger  | Content |
@@ -24,6 +27,8 @@ Bellow are listed supported snippets
 | `actionCreator→`   | Creates a redux action creator |
 | `actionInterface→`   | Creates an interface for redux action |
 | `actionConstant→`   | Creates constant name for redux action |
+| `selector→`   | Creates redux state selector |
+| `createSel→`   | Creates reselect selector using createSelector |
 
 ### Import/Export snippets
 | Trigger  | Content |

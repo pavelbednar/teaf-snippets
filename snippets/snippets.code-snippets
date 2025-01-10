@@ -75,9 +75,10 @@
 		"prefix": "rfc",
 		"body": [
 			"import React, {FunctionComponent} from \"react\";",
-			"${1:const classNames = bemClassNames(\"${2/([A-Z][a-z]+$)|((^|[A-Z])[a-z]+)/${1:/downcase}${2:/downcase}${2:+-}/gm}\");}",
+			
+			"${1:import { bemClassNames } from \"@teaf/utils\";\nconst classNames = bemClassNames(\"${2/([A-Z][a-z]+$)|((^|[A-Z])[a-z]+)/${1:/downcase}${2:/downcase}${2:+-}/gm}\");}",
 			"",
-			"type ${2:${TM_FILENAME_BASE}}Props = {",
+			"export type ${2:${TM_FILENAME_BASE}}Props = {",
 			"\t${3:children?: React.ReactNode;}",
 			"}",
 			"",
@@ -178,5 +179,50 @@
 		"prefix": "destruct",
 		"body": "const { ${2:property}${3:, ...${4:rest}} } = ${1:objectName};$0",
 		"description": "Creates exportable const for redux action name"
+	},
+	"TEAF: region": {
+		"prefix": "region",
+		"body": [
+			"//#region ${1: Name}",
+			"$0",
+			"//#endregion $1",
+		],
+		"description": "Creates typescript region"
+	},
+	"TEAF: ts-ignore": {
+		"prefix": "tsig",
+		"body": "//@ts-ignore",
+		"description": "Creates typescript //@ts-ignore directive"
+	},
+	"TEAF: createSelector": {
+		"prefix": "createSel",
+		"body": [
+			"${99:/**\n * $100\n */}",
+			"export const createGet${1:SomeSelector} = () =>",
+			"\tcreateSelector<IAppState, string, ReturnType<typeof $6>, ReturnType<typeof $9>, ${2:boolean}>(",
+        	"\t\t(state${4:, ${5: attribute}}) => ${6:selector1}(state$4)",
+        	"\t\t(state${7:, ${8: attribute}}) => ${9:selector2}(state$7)",
+        	"\t\t(${10:value1}, ${11:value2}) => {",
+        	"\t\t\t${12: return ${13}};",
+        	"\t\t}",
+			"\t);"
+		],
+		"description": "Creates redux selector with reselect createSelector`.",
+	},
+	"TEAF: selector": {
+		"prefix": "selector",
+		"body": [
+			"${99:/**\n * $100\n */}",
+			"export const get${1:SomeSelector}: Selector<IAppState, ${2:boolean}${3:, ${4:string}}> = (state${5:, ${6:argument}}) => state.${10};"
+		],
+		"description": "Creates redux selector with reselect createSelector`.",
+	},
+	"TEAF: console.log": {
+		"prefix": "cl",
+		"body": [
+			"// eslint-disable-next-line no-console",
+			"console.log(${0});"
+		],
+		"description": "Creates redux selector with reselect createSelector`.",
 	},
 }
