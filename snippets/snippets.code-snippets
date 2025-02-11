@@ -76,7 +76,7 @@
 		"body": [
 			"import React, {FunctionComponent} from \"react\";",
 			
-			"${1:import { bemClassNames } from \"@teaf/utils\";\nconst classNames = bemClassNames(\"${2/([A-Z][a-z]+$)|((^|[A-Z])[a-z]+)/${1:/downcase}${2:/downcase}${2:+-}/gm}\");}",
+			"${1:import { bemClassNames \\} from \"@teaf/utils\";\nconst classNames = bemClassNames(\"${2/([A-Z][a-z]+$)|((^|[A-Z])[a-z]+)/${1:/downcase}${2:/downcase}${2:+-}/gm}\");}",
 			"",
 			"export type ${2:${TM_FILENAME_BASE}}Props = {",
 			"\t${3:children?: React.ReactNode;}",

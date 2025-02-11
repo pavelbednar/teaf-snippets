@@ -1,4 +1,11 @@
 # Change Log
+#### 0.0.11
+* fixed optional bemClassNames in `rfc` snippet
+#### 0.0.10
+* new snippet `createSel`
+* new snippet `region`
+* new snippet `tsig`
+* new snippet `selector`
 #### 0.0.9
 * updated typo in readme
 #### 0.0.7
