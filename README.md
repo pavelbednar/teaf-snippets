@@ -14,12 +14,14 @@ Bellow are listed supported snippets
 | :------- | ------- |
 | `interfaceInstanceOf→`   | Creates a new Interface with support of `instanceof` comparison|
 | `rfc→`   | Template for typed react functional component |
+| `fwdRef→`   | Template for typed react forwardRef component |
 | `useState→`   | Creates strongly typed `useState` with default value |
 | `useEffect→`   | Creates template for `useEffect` with optional cleanup function |
 | `destruct→`   | Object destructing |
 | `tsig→`   | Creates typescript `//@ts-ignore` directive |
 | `region→`   | Creates typescript `//#region` directive`` |
 | `cl→`   | Creates `console.log` with `//eslint-disable-next-line no-console` directive  |
+
 
 ### Redux Actions Snippets
 | Trigger  | Content |
@@ -69,10 +71,23 @@ Template for typed react functional component.
  #### Placeholders
  * Component Name (required, name of file is default value)
  * BemClassName (optional)
+ * Type of reference for React component (eg HTMLButtonElement, etc.)
  * Props (optional, `children` default value)
  * JSDoc (optional)
   
 <img src="./docs/rfc.gif"/>
+
+### React forwardRef Component 
+Template for typed react forwardRef component.
+ #### Placeholders
+ * Component Name (required, name of file is default value)
+ * BemClassName (optional)
+ * Props (optional, `children` default value)
+ * Props (optional, `children` default value)
+ * JSDoc (optional)
+  
+<img src="./docs/fwdRef.gif"/>
+
 
 ### useState
 Creates strongly typed `useState` with default value.

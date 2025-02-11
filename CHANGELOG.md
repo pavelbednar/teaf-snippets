@@ -1,4 +1,7 @@
 # Change Log
+#### 0.0.12
+* new snippet `fwdRef` for react forwardRef component
+* minor adjustments to `rfc` snippet
 #### 0.0.11
 * fixed optional bemClassNames in `rfc` snippet
 #### 0.0.10
@@ -16,6 +19,6 @@
 #### 0.0.6
 * New spippets for connecting components to redux.
 #### 0.0.5
-* Better BEM class naming for `rfc` snippet. Now it creates lower-cased name seperated with dashes.
+* Better BEM class naming for `rfc` snippet. Now it creates lower-cased name separated with dashes.
 #### 0.0.4
 * Moved jsdoc section for `rfc` snippet
